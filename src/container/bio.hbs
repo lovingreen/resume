@@ -1,0 +1,94 @@
+<main>
+    <section>
+        {{> title data="bio" big=true}}
+        <p>name: {{name}}</p>
+        <p>Live: {{birthdate}} - {{deathdate}}</p>
+        <p>birthplace: {{birthplace}}</p>
+        <p>deathplace: {{deathplace}}</p>
+        <p>nationality: {{nationality}}</p>
+        <p>occupation: {{occupation}}</p>
+        <ul>
+            {{#each known_for}}
+                <li>{{this}}</li>
+             {{/each}}
+        </ul>
+        <hr>
+        <br>
+        {{> title data="education"}}
+        {{#each education}}
+            <p>{{this.degree}}</p>
+            <p>{{this.field}}</p>
+            <p>{{this.institution}}</p>
+            <p>{{this.year}}</p>
+        {{/each}}
+        <hr>
+        <br>
+
+        {{> title data="notable_publications"}}
+        {{#each notable_publications}}
+            <hr>
+            <p>{{this.title}}</p>
+            <p>{{this.year}}</p>
+            <p>{{this.publisher}}</p>
+            <br>
+        {{/each}}
+
+
+        {{> title data="partners"}}
+        {{#each partners}}
+            <hr>
+            <p>{{this.name}}</p>
+            <p>{{this.relationship}}</p>
+            <p>{{this.years}}</p>
+            <br>
+        {{/each}}
+
+        {{> title data="awards"}}
+        {{#each awards}}
+            <hr>
+            <p>{{this.title}}</p>
+            <p>{{this.year}}</p>
+            <p>{{this.description}}</p>
+            <br>
+        {{/each}}
+
+        {{> title data="influences"}}
+        <ul>
+            {{#each influences}}
+                <li>{{this}}</li>
+             {{/each}}
+        </ul>
+        <hr>
+        {{> title data="influenced"}}
+        <ul>
+            {{#each influences}}
+                <li>{{this}}</li>
+             {{/each}}
+        </ul>
+        <hr>
+
+        {{> title data="quotes"}}
+        {{#each quotes}}
+                <q>{{this}}</q>
+                <br>
+        {{/each}}
+        
+        {{> title data="major_discoveries"}}
+        {{#each major_discoveries}}
+            <hr>
+            <p>{{this.title}}</p>
+            <p>{{this.year}}</p>
+            <p>{{this.description}}</p>
+            <br>
+        {{/each}}
+
+        {{> title data="contributions"}}
+        {{#with contributions}}
+            <p>title: {{title}}</p>
+            <p>year: {{year}}</p>
+            <p>description: {{description}}</p>
+            <p>field: {{field}}</p>
+        {{/with}}
+
+    </section>
+</main>
