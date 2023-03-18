@@ -1,0 +1,112 @@
+<main>
+    <section>
+        {{> title data="Apple MacBook Pro" big=true}}
+        <p>description {{description}}</p>
+        <p>price {{price}}</p>
+        <p>category {{category}}</p>
+        <hr>
+        <br>
+
+        {{#with features}}
+        <ul>
+            <li><em>features</em></li>
+            {{#with processor}}
+                <li><em>processor</em></li>
+                <li>brand: {{brand}}</li>
+                <li>model: {{model}}</li>
+                <li>speed: {{speed}}</li>
+                <li>cores: {{cores}}</li>
+                <li>cache: {{cache}}</li>
+            {{/with}}
+            <br>
+
+            {{#with memory}}
+                <li><em>memory</em></li>
+                <li>memory: {{memory}}</li>
+                <li>size: {{size}}</li>
+                <li>speed: {{speed}}</li>
+            {{/with}}
+            <br>
+
+            {{#with storage}}
+                <li><em>storage</em></li>
+                <li>type: {{type}}</li>
+                <li>size: {{size}}</li>
+            {{/with}}
+            <br>
+
+            {{#with display}}
+                <li><em>display</em></li>
+                <li>type: {{type}}</li>
+                <li>resolution: {{resolution}}</li>
+                <li>technology: {{technology}}</li>
+                <li>brightness: {{brightness}}</li>
+                <li>color_space: {{color_space}}</li>
+                <li>refresh_rate: {{refresh_rate}}</li>             
+            {{/with}}
+            <br>
+
+            {{#with display}}
+                <li><em>display</em></li>
+                <li>type: {{type}}</li>
+                <li>resolution: {{resolution}}</li>
+                <li>technology: {{technology}}</li>
+                <li>brightness: {{brightness}}</li>
+                <li>color_space: {{color_space}}</li>
+                <li>refresh_rate: {{refresh_rate}}</li>             
+            {{/with}}
+            <br>
+
+            {{#with graphics}}
+                <li><em>graphics</em></li>
+                <li>brand: {{brand}}</li>
+                <li>model: {{model}}</li>
+                <li>memory: {{memory}}</li>       
+            {{/with}}
+            <br>
+            <hr>
+
+            {{#each ports}}
+                    <li><em>ports</em></li>
+                    <li>type: {{type}}</li>
+                    <li>count: {{count}}</li>
+                    {{#each features}}
+                        <li>{{this}}</li>                     
+                    {{/each}}
+                    <br>
+                    <hr>     
+            {{/each}}
+
+            {{#with battery}}
+                <li><em>battery</em></li>
+                <li>type: {{type}}</li>
+                <li>capacity: {{capacity}}</li>
+                <li>life: {{life}}</li>       
+            {{/with}}
+            <li>weight: {{weight}}</li>     
+            <br>
+            <hr>
+
+            {{#with dimensions}}
+                <li><em>dimensions</em></li>
+                <li>height: {{height}}</li>
+                <li>width: {{width}}</li>
+                <li>depth: {{depth}}</li>       
+            {{/with}}
+            <li>operating_system: {{operating_system}}</li> 
+            <br>
+            <hr>
+
+            {{#each accessories}}
+                    <li><em>accessories</em></li>
+                    <li>name: {{name}}</li>
+                    <li>price: {{price}}</li>
+                    <br>
+            {{/each}}
+
+        </ul>
+            
+
+        {{/with}}
+    </section>
+</main>
