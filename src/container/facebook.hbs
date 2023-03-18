@@ -1,0 +1,82 @@
+<main>
+    {{> title data="Facebook" big=true}}
+    <ul>
+        <li><em>USERS</em></li>
+        {{#each users}}
+        <li>id: {{id}}</li>
+        <li>name: {{name}}</li>
+        <li>gender: {{gender}}</li>
+        <li>age: {{age}}</li>  
+        <hr>
+        <br> 
+        <ul>
+            <li><em>friends</em></li>
+            {{#each friends}}
+            <li>id: {{id}}</li>
+            <li>name: {{name}}</li>
+            <li>gender: {{gender}}</li>
+            <li>age: {{age}}</li> 
+            <hr> 
+
+                {{#each mutual_friends}}
+                <li><em>mutual_friends</em></li>
+                <li>id: {{id}}</li>
+                <li>name: {{name}}</li>
+                <li>gender: {{gender}}</li>
+                <li>age: {{age}}</li> 
+                <hr> 
+                    {{#each mutual_friends}}
+                    <li><em>mutual_friends</em></li>
+                    <li>id: {{id}}</li>
+                    <li>name: {{name}}</li>
+                    <li>gender: {{gender}}</li>
+                    <li>age: {{age}}</li> 
+                    <hr> 
+             
+                {{/each}}
+             
+                {{/each}}
+
+                {{#each groups}}
+                    <li><em>groups</em></li>
+                    <li>id: {{id}}</li>
+                    <li>name: {{name}}</li>
+                    <li>description: {{description}}</li>
+                    <hr> 
+
+                    {{#each members}}
+                        <li><em>members</em></li>
+                        <li>id: {{id}}</li>
+                        <li>name: {{name}}</li>
+                        <li>gender: {{gender}}</li>
+                        <li>age: {{age}}</li> 
+                        <hr> 
+             
+                {{/each}}
+            {{/each}}
+
+            {{/each}}
+
+            {{#each groups}}
+            <li><em>groups</em></li>
+            <li>id: {{id}}</li>
+            <li>name: {{name}}</li>
+            <li>description: {{description}}</li>
+            <hr> 
+
+                {{#each members}}
+                <li><em>members</em></li>
+                <li>id: {{id}}</li>
+                <li>name: {{name}}</li>
+                <li>gender: {{gender}}</li>
+                <li>age: {{age}}</li> 
+                <hr> 
+             
+                {{/each}}
+            {{/each}}
+
+
+        </ul>
+        {{/each}}
+    </ul>
+</main>
