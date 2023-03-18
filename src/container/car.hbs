@@ -1,0 +1,130 @@
+<main>
+    {{> title data="car" big=true}}
+    <p>make: {{make}}</p>
+    <p>model: {{model}}</p>
+    <p>year: {{year}}</p>
+    <p>color: {{color}}</p>
+
+     <ul>
+        {{#with features}}
+            {{#with interior}}
+                {{#with seats}}
+                    <li><em>seats</em></li>
+                    <li>{{material}}</li>
+                    <li>{{color}}</li>
+                    <li>{{heated}}</li>
+                    <li>{{ventilated}}</li>
+                {{/with}}
+                <hr>
+                <br>
+
+                {{#with dashboard}}
+                    <li><em>dashboard</em></li>
+                    <li>{{material}}</li>
+                    <li>{{color}}</li>
+                    {{#with display}}
+                        <li><em>display</em></li>
+                        <li>{{type}}</li>
+                        <li>{{size}}</li>
+                        <li>{{resolution}}</li>
+                        <li>{{touchscreen}}</li>
+                    {{/with}}
+                {{/with}}
+                <hr>
+                <br>
+
+                {{#with audio}}
+                    <li><em>audio</em></li>
+                    <li>system:{{system}}</li>
+                    <li>speakers: {{speakers}}</li>
+                    <li>subwoofer: {{subwoofer}}</li>
+                    <li>bluetooth: {{bluetooth}}</li>
+                    <li>USB: {{USB}}</li>
+                {{/with}}
+                <hr>
+                <br>
+
+
+            {{/with}}
+
+            {{#with exterior}}
+                {{#with wheels}}
+                    <li><em>wheels</em></li>
+                    <li>size: {{size}}</li>
+                    <li>color: {{color}}</li>
+                    <li>type: {{type}}</li>
+                {{/with}}
+                <hr>
+
+                {{#with headlights}}
+                    <li><em>headlights</em></li>
+                    <li>type: {{type}}</li>
+                    <li>brightness: {{brightness}}</li>
+                    <li>automatic: {{automatic}}</li>
+                {{/with}}
+
+                {{#with sunroof}}
+                    <li><em>sunroof</em></li>
+                    <li>type: {{type}}</li>
+                    <li>size: {{size}}</li>
+                    <li>automatic: {{automatic}}</li>
+                {{/with}}
+
+            {{/with}}
+
+            {{#with safety}}
+                {{#with airbags}}
+                    <li><em>airbags</em></li>
+                    <li>front: {{front}}</li>
+                    <li>side: {{side}}</li>
+                    <li>knee: {{knee}}</li>
+                    <li>rear: {{rear}}</li>
+                {{/with}}
+                <hr>
+
+                {{#with assistance}}
+                    <li><em>assistance</em></li>
+                    <li>blind_spot_monitoring: {{blind_spot_monitoring}}</li>
+                    <li>rear_cross_traffic_alert: {{rear_cross_traffic_alert}}</li>
+                    <li>lane_departure_warning: {{lane_departure_warning}}</li>
+                    <li>adaptive_cruise_control: {{adaptive_cruise_control}}</li>
+                    <li>collision_warning: {{collision_warning}}</li>
+                    <br>
+                    <hr>
+                {{/with}}
+
+            {{/with}}
+
+        {{/with}}
+
+        {{#with engine}}
+            <li><em>engine</em></li>
+            <li>type: {{type}}</li>
+            <li>displacement: {{displacement}}</li>
+            <li>horsepower: {{horsepower}}</li>
+            <li>torque: {{torque}}</li>
+            {{#with transmission}}
+                <li>type: {{type}}</li>
+                <li>gears: {{gears}}</li>
+            {{/with}}
+        {{/with}}
+
+        {{#with fuel_economy}}
+            <li>city: {{city}}</li>
+            <li>highway: {{highway}}</li>
+            <li>combined: {{combined}}</li>
+        {{/with}}
+
+        {{#with price}}
+            <li>base: {{base}}</li>
+            <li>destination: {{destination}}</li>
+            {{#with fuel_economy}}
+                <li>navigation: {{navigation}}</li>
+                <li>moonroof: {{moonroof}}</li>
+                <li>premium_paint: {{premium_paint}}</li>
+            {{/with}}
+            <li>total: {{total}}</li>
+        {{/with}}
+    </ul>
+
+</main>
