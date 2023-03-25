@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            {{#with navigation}}
+            <div class="col-7"><h1>{{Logo}}</h1></div>
+
+            <div class="col-5">
+                <div class="nav mt-2">
+                    {{#each links}}
+                    <div class="nav-item">
+                        <a href="{{href}}" class="{{#if @last}}disabled{{/if}} nav-link">{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+
+            {{/with}}
+        </div>
+    </div>
+</div>
