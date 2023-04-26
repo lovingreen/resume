@@ -1,0 +1,80 @@
+{{#each data}}
+    <div class="card my-3">
+        <div class="card-body">
+            {{#with this}}
+                {{#with reviewBody}}
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row d-flex align-items-center">
+                                {{#with ../title}}
+                                    <div class="col-10">
+                                        <h4>{{userName}}</h4>
+                                        <div>{{caption}}</div>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <div>{{date}}</div>
+                                    </div>
+                                {{/with}}
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                {{#with seller}}
+                                    <b>{{title}}:</b> {{value}}
+                                {{/with}}
+                            </div>
+                            <div class="my-3">
+                                {{#with rating}}
+                                    <b>{{title}}:</b> {{value}}
+                                {{/with}}
+                            </div>
+                            <div class="my-3">
+                                {{#each text}}
+                                    {{this}}
+                                {{/each}}
+                            </div>
+                            <div class="my-3">
+                                {{#with advantages}}
+                                    <b>{{title}}:</b>
+                                    <p>{{text}}</p>
+                                {{/with}}
+                            </div>
+                            <div class="my-3">
+                                {{#with disadvantages}}
+                                    <b>{{title}}:</b>
+                                    <p>{{text}}</p>
+                                {{/with}}
+                            </div>
+                            <div class="mt-3 d-flex">
+                                {{#each images}}
+                                    <img class='p-2' src='{{this}}' alt='...' />
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    {{#each coments}}
+                        {{#with this}}
+                            <div class="row justify-content-end">
+                                <div class="col-11 my-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row d-flex align-items-center">
+                                                <div class="col-10">
+                                                    <h4>{{userName}}</h4>
+                                                </div>
+                                                <div class="col-2 text-end">
+                                                    <div>{{date}}</div>
+                                                </div>
+                                                <div>{{text}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {{/with}}
+                    {{/each}}
+                {{/with}}
+            {{/with}}
+        </div>
+    </div>
+{{/each}}
