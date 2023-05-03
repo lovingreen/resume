@@ -34,11 +34,113 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
+router.get('/index', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    shopProject: [
+      {
+        text: 'shophome',
+        href: '/shophome',
+      },
+      {
+        text: 'shopcatalog',
+        href: '/shopcatalog',
+      },
+      {
+        text: 'shopproduct',
+        href: '/shopproduct',
+      },
+      {
+        text: 'shopreview',
+        href: '/shopreview',
+      },
+      {
+        text: 'shopcart',
+        href: '/shopcart',
+      },
+      {
+        text: 'shoporder',
+        href: '/shoporder',
+      },
+      {
+        text: 'shopprofile',
+        href: '/shopprofile',
+      },
+      {
+        text: 'shopnews',
+        href: '/shopnews',
+      },
+    ],
+
+    resumeProject: [
+      {
+        text: 'skills',
+        href: '/skills',
+      },
+      {
+        text: 'summary',
+        href: '/summary',
+      },
+      {
+        text: 'education',
+        href: '/education',
+      },
+      {
+        text: 'work',
+        href: '/work',
+      },
+    ],
+
+    testProject: [
+      {
+        text: 'person',
+        href: '/person',
+      },
+      {
+        text: 'biography',
+        href: '/bio',
+      },
+      {
+        text: 'program',
+        href: '/program',
+      },
+      {
+        text: 'web',
+        href: '/web',
+      },
+    ],
+
+    bootstrapProject: [
+      {
+        text: 'js',
+        href: '/js',
+      },
+      {
+        text: 'car',
+        href: '/car',
+      },
+      {
+        text: 'macbook',
+        href: '/mac',
+      },
+      {
+        text: 'task21',
+        href: '/task21',
+      },
+      {
+        text: 'task22',
+        href: '/task22',
+      },
+      {
+        text: 'task31',
+        href: '/task31',
+      },
+    ],
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
