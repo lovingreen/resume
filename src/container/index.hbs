@@ -3,8 +3,76 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
  --}}
 
-<h1>Hello world</h1>
-<p>test container</p>
+<h1>Головна сторінка. Проекти Подриги Богдана</h1>
+
+<main>
+    <div class='row my-3'>
+      <div class='col-6 mt-5'>
+        <div class='border-end border-3 border-secondary'>
+          <div class='card-body p-3 text-end h-100'>
+            <p>Привіт, на цій сторінці ти можеш побачити посилання на інші сторінки мого проєкту. Ці проекти - це сторінки прототипу інтернет маназину.</p>
+            <p><strong>Стек технологій:</strong> HTML, Bootstrap, Handlebars</p>
+          </div>
+        </div>
+      </div>
+      <div class='col-6 mt-5'>
+        <div class='card border border-0 text-center mb-4'>
+          <div class='card-header'>
+            <h5 class='card-title'>Shop Project</h5>
+          </div>
+          <div class='card-body'>
+            <div class='row'>
+              <div class='col'>
+                <div class='d-flex flex-wrap justify-content-center'>
+                    {{#each shopProject}}
+                        <div class="m-2">
+                            <a href='{{href}}' class='btn btn-secondary'>{{text}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='card border border-0 text-center'>
+          <div class='card-header'>
+            <h5 class='card-title'>Resume Project</h5>
+          </div>
+          <div class='card-body'>
+            <div class='row'>
+              <div class='col'>
+                <div class='d-flex flex-wrap justify-content-center'>
+                    {{#each resumeProject}}
+                        <div class="m-2">
+                            <a href='{{href}}' class='btn btn-secondary'>{{text}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+                <hr>
+                <div class='d-flex flex-wrap justify-content-center'>
+                    {{#each testProject}}
+                        <div class="m-2">
+                           <a href='{{href}}' class='btn btn-secondary'>{{text}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+                <hr>
+                <div class='d-flex flex-wrap justify-content-center'>
+                    {{#each bootstrapProject}}
+                        <div class="m-2">
+                            <a href='{{href}}' class='btn btn-secondary'>{{text}}</a>
+                        </div>
+                    {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+</main>
 
 {{!-- 
     Цей код містить лише те, що буде виводитись в <body>
